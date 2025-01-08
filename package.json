@@ -36,12 +36,6 @@
     "typescript-eslint": "^8.18.2",
     "vite": "^6.0.5"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run precommit",
-      "pre-push": "npm run prepush"
-    }
-  },
   "lint-staged": {
     "src/**/*.+(js,jsx,ts,tsx,json)": [
       "prettier --write && git add -A"
