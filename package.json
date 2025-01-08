@@ -1,5 +1,5 @@
 {
-  "name": "diary-front",
+  "name": "daylist-front",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -37,8 +37,9 @@
     "vite": "^6.0.5"
   },
   "lint-staged": {
-    "src/**/*.+(js,jsx,ts,tsx,json)": [
-      "prettier --write && git add -A"
+    "src/**/*.{js,jsx,ts,tsx,css,scss}": [
+      "prettier --write",
+      "git add -A"
     ],
     "src/**/*.{ts,tsx}": [
       "eslint --max-warnings=0 --fix \"**/*.+(ts|tsx)\""
