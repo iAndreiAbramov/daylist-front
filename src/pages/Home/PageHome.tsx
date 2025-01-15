@@ -1,16 +1,22 @@
 import React from 'react';
 
-import { TestComponent } from 'lib/components/ui/TestComponent';
-import { cn } from 'lib/utils/cn.ts';
+import { clsx } from 'clsx';
 
-import { LocalComponent } from './LocalComponent.tsx';
+import { DefaultLayout } from 'lib/components/layouts';
+import { Footer } from 'lib/components/ui/Footer';
+import { Header } from 'lib/components/ui/Header';
+import { TodoList } from 'lib/components/ui/TodoList';
+
+import { TODOLIST_MOCK } from './mocks/todolist-mock.ts';
 
 export const PageHome: React.FC = () => {
   return (
-    <div className={cn('flex gap-4')}>
-      <div>Page Home</div>
-      <TestComponent />
-      <LocalComponent />
-    </div>
+    <DefaultLayout>
+      <Header />
+      <main className={clsx('flex flex-col gap-4 justify-start', 'h-full')}>
+        <TodoList todolist={TODOLIST_MOCK} />
+      </main>
+      <Footer />
+    </DefaultLayout>
   );
 };
